@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#hamburguer, #close{
+    display: none;
+}
+#container{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    justify-content: space-between;
+}
+header{
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    grid-column: 1/ span 2;
+    justify-content: space-between;
+}
+header #menu-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu-header{
+    list-style: none;
+}
+#menu-header li a{
+    text-decoration: none;
+    color: rgb(172, 170, 170);
+}
+#menu-header li a:hover{
+    color: #eaae54;
+}
+#content{
+    grid-column: 1/ span 2;
+    display: grid;
+    grid-template-columns: 67% 30%;
+    justify-content: space-between;
+}
+#imagen{
+    width: 100%;
+}
+#imagen #img-mobile{
+    display: none;
+}
+#imagen #img-desktop{
+    width: 100%;
+}
+#textos{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#textos > p{
+    width: 42%;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1;
+}
+#textos #descripcion{
+    width: 50%;
+}
+#descripcion > p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+#descripcion button{
+    background-color: #D95449;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding: 15px 27px;
+    border: none;
+}
+#descripcion button:hover{
+    background-color: #00001a;
+}
+#content aside{
+    width: 89%;
+    background-color: #00001a;
+    color: rgb(172, 170, 170);
+    padding: 19px;
+}
+#content aside h1{
+    color: #eaae54;
+    font-size: 42px;
+}
+.card{
+    padding: 20px 0;
+}
+.bordo{
+    border-top: 1px solid  rgb(172, 170, 170);;
+    border-bottom: 1px solid  rgb(172, 170, 170);;
+}
+#content .card h3 a{
+    text-decoration: none;
+    color: white;
+    
+}
+#content .card h3 a:hover{
+    color: #eaae54;
+}
+#content .card h3{
+    margin: 15px 0;
+}
+footer{
+    display: grid;
+    grid-column: 1/ span 2;
+    grid-template-columns: 30% 30% 30%;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+footer .footer-card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-card #img-footer{
+    width: 28%;
+}
+.footer-card #text{
+    width: 60%;
+}
+.footer-card #text h2{
+    color: #ccc;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.footer-card #text h5{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.footer-card #text p{
+    font-size: 15px;
+    line-height: 1.7;
+}
+.footer-card #img-footer img{
+    width: 100%;
+}
+@media (max-width:500px)
+{
+    #hamburguer,#close{
+        display:block;
+        position: absolute;
+        top: 38px;
+        right: 10%;
+    }
+    #close{
+        display: none;
+        z-index: 10;
+    }
+    #container{
+        grid-template-columns: auto;
+        justify-content: space-between;
+    }
+    header{
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column: 1/ span 2;
+    }
+    header #menu-header{
+        display: none;
+        background-color: #d0cccc;
+        position:absolute;
+        top:0;
+        right:0;
+        flex-direction:column;
+        padding: 60px 0;
+        width: 60%;
+    }
+    #menu-header li{
+        margin:30px auto;
+    }
+    #content{
+        grid-template-columns: auto;
+    }
+    #imagen{
+        padding-bottom: 20px;
+    }
+    #imagen #img-desktop{
+        display: none;
+    }
+    #imagen #img-mobile{
+        width: 100%;
+        display: block;
+    }
+    #textos{
+        flex-direction: column;  
+    }
+    #textos > p{
+        width: 100%;
+        font-size: 45px;
+        padding-bottom: 20px;
+    }
+    #textos #descripcion{
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    #content aside{
+        background-color: #00001a;
+        color: rgb(172, 170, 170);
+        padding: 22px;
+    }
+    #content aside h1{
+        color: #eaae54;
+        margin: 10px 0;
+        font-size: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card{
+        padding: 20px 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    footer{
+        grid-template-columns: auto;
+    }
+    footer .footer-card{
+        padding-bottom: 20px;
+    }
+    .footer-card #text{
+        width: 60%;
+    }
+    .footer-card #text h2{
+        color: #ccc;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .footer-card #text h5{
+        font-size: 20px;
+        padding-bottom: 12px;
+    }
+    .footer-card #text p{
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .footer-card #img-footer {
+        width: 25%;
+    }
+    .footer-card #img-footer img{
+        width: 100%;
+    }
+}
